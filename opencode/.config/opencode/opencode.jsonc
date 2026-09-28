@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  "plugin": ["@dietrichgebert/ponytail"],
+  "mcp": {
+    "blender": {
+      "type": "local",
+      "command": ["/usr/bin/uvx", "blender-mcp"],
+      "enabled": true
+    }
+  },
+}
+

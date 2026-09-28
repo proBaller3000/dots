@@ -1,0 +1,97 @@
+[credential]
+	helper = store
+[user]
+	email = empty
+	name = empty
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	light = false
+  side-by-side = true
+  features = rose-pine
+
+[delta "rose-pine"]
+  blame-palette = "#191724 #26233a #524f67 #908caa #e0def4"
+  commit-decoration-style = "box #908caa"
+  dark = true
+  file-decoration-style = "#908caa"
+  file-style = "#e0def4"
+  hunk-header-decoration-style = "box #908caa"
+  hunk-header-style = "#e0def4"
+
+	; minus-style = brightred
+  minus-emph-style = syntax red
+	; plus-style = brightgreen
+  plus-emph-style = syntax green
+
+  minus-empty-line-marker-style = "#191724"
+  minus-line-format = "- {eb3}"
+  minus-style = "syntax #2a202b"
+  minus-style = "syntax #30212f"
+
+
+  line-numbers-minus-style = brightred
+  line-numbers-plus-style = brightgreen
+  line-numbers-left-style = "#3e3e43"
+  line-numbers-right-style = "#3e3e43"
+  line-numbers-zero-style = "#57575f"
+  zero-style = syntax
+
+  plus-empty-line-marker-style = "#191724"
+  plus-line-format = "+ {eb3}"
+  plus-style = "syntax #202b35"
+
+  syntax-theme = "Rose-Pine"
+  ;syntax-theme = "base16"
+
+  [delta "mellow-barbet"]
+    # author: https://github.com/kvrohit
+    # To configure terminal colors see https://github.com/kvrohit/mellow.nvim#terminals
+    dark = true
+    syntax-theme = Rose-Pine
+    line-numbers = true
+    file-style = brightwhite
+    file-decoration-style = none
+    file-added-label = [+]
+    file-copied-label = [==]
+    file-modified-label = [*]
+    file-removed-label = [-]
+    file-renamed-label = [->]
+    hunk-header-decoration-style = "#3e3e43" box ul
+    plus-style = brightgreen black
+    plus-emph-style = black green
+    minus-style = brightred black
+    minus-emph-style = black red
+    line-numbers-minus-style = brightred
+    line-numbers-plus-style = brightgreen
+    line-numbers-left-style = "#3e3e43"
+    line-numbers-right-style = "#3e3e43"
+    line-numbers-zero-style = "#57575f"
+    zero-style = syntax
+    whitespace-error-style = black bold
+    blame-code-style = syntax
+    blame-palette = "#161617" "#1b1b1d" "#2a2a2d" "#3e3e43"
+    merge-conflict-begin-symbol = ~
+    merge-conflict-end-symbol = ~
+    merge-conflict-ours-diff-header-style = yellow bold
+    merge-conflict-ours-diff-header-decoration-style = "#3e3e43" box
+    merge-conflict-theirs-diff-header-style = yellow bold
+    merge-conflict-theirs-diff-header-decoration-style = "#3e3e43" box
+	; minus-style = brightred
+	; minus-emph-style = brightred black
+	; plus-style = brightgreen
+	; plus-emph-style = brightgreen black
+	; commit-decoration-style = bold yellow
+	; file-decoration-style = bold yellow
+	; line-numbers-minus-style = brightred
+	; line-numbers-plus-style = brightgreen
+	; syntax-theme = ansi
