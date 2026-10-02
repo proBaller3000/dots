@@ -10,16 +10,16 @@ stow_package() {
   printf "\nstow $package_name script\n"
   echo "==============="
 
-  # Remove the config this package manages, derived from its layout: $HOME + package-relative path
+  # Unstow prior stow-created links first, so the removal below never descends into the repo
+  (cd "$dotfiles_dir" && stow -D "$package_name")
+
+  # Remove any real config the package manages, derived from its layout: $HOME + package-relative path
   local file target
   while IFS= read -r file; do
     target="$HOME/${file#"$dotfiles_dir/$package_name"/}"
-    if [ "$(dirname "$target")" = "$HOME" ]; then
+    if [ -e "$target" ]; then
       echo "Removing $target..."
       rm -f "$target"
-    else
-      echo "Removing $(dirname "$target")..."
-      rm -rf "$(dirname "$target")"
     fi
   done < <(find "$dotfiles_dir/$package_name" -type f)
 
