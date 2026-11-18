@@ -209,6 +209,13 @@ memory.
 
 # Navigating
 
+## Flash
+
+[flash.nvim](https://github.com/folke/flash.nvim) with default config.
+
+- `s`: jump to a visible match in normal, visual, and operator-pending mode.
+- Labels use the `CurSearch` highlight so they stand out from the matches.
+
 ## Picker
 
 The [snacks.nvim](https://github.com/folke/snacks.nvim) picker if not

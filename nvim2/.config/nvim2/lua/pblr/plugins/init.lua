@@ -7,6 +7,7 @@ vim.pack.add({
 	"https://github.com/akinsho/bufferline.nvim",
 	"https://github.com/nvim-lualine/lualine.nvim",
 	"https://github.com/folke/snacks.nvim",
+	"https://github.com/folke/flash.nvim",
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/nvim-mini/mini.pick",
 	"https://github.com/stevearc/oil.nvim",
@@ -27,6 +28,7 @@ require("pblr.plugins.treesitter")
 require("pblr.plugins.highlights")
 require("pblr.plugins.completion")
 require("pblr.plugins.pairs")
+require("pblr.plugins.flash")
 require("pblr.plugins.git")
 require("pblr.plugins.lsp")
 require("pblr.plugins.keymaps")

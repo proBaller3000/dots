@@ -1,5 +1,8 @@
 vim.keymap.set("n", "H", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Go to the left tab" })
 vim.keymap.set("n", "L", "<Cmd>BufferLineCycleNext<CR>", { desc = "Go to the right tab" })
+vim.keymap.set({ "n", "x", "o" }, "s", function()
+	require("flash").jump()
+end, { desc = "Flash" })
 
 vim.keymap.set("n", "<leader>l", function()
 	MiniPick.registry.files()
