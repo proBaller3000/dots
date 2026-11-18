@@ -29,6 +29,9 @@ vim.keymap.set("n", "<leader>n", function()
 	Snacks.picker.notifications()
 end, { desc = "Notification history" })
 
+vim.keymap.set("n", "<leader>gg", function()
+	Snacks.lazygit()
+end, { desc = "Lazygit" })
 vim.keymap.set("n", "<leader>gb", function()
 	require("gitsigns").blame_line()
 end, { desc = "Blame line" })
@@ -163,6 +166,7 @@ require("which-key").add({
 	{ "<leader>yp", icon = yank_icon },
 	{ "<leader>yc", icon = yank_icon, mode = "x" },
 	{ "<leader>g", group = "Git", icon = git_icon },
+	{ "<leader>gg", icon = git_icon },
 	{ "<leader>gb", icon = git_icon },
 	{ "<leader>gB", icon = git_icon },
 	{ "<leader>gO", icon = git_icon },

@@ -362,6 +362,14 @@ Neovim's default `gr*` LSP mappings are removed.
 
 # Git
 
+## Lazygit
+
+[Snacks.nvim](https://github.com/folke/snacks.nvim) lazygit integration.
+
+| Keys | Action | Notes |
+| --- | --- | --- |
+| `<leader>gg` | Open lazygit | |
+
 ## Signs and blame
 
 Changes are shown as colored line numbers by
