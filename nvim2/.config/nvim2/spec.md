@@ -32,6 +32,11 @@
 - `-` counts as part of a word, so foo-bar is one word.
   - fits kebab-case names.
 
+## Project-local config
+
+- `exrc` **on**, so `.nvim.lua`, `.nvimrc`, and `.exrc` files load from the
+  project directory. Neovim prompts before trusting untrusted files.
+
 ## Look of the buffer
 
 - **Hybrid** line numbers: `number` + `relativenumber` **on**, so the cursor

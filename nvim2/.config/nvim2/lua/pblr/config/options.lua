@@ -52,6 +52,7 @@ opt.timeoutlen = 500
 opt.ttimeoutlen = 0
 opt.termguicolors = true
 opt.clipboard = "unnamedplus"
+opt.exrc = true
 
 require("vim._core.ui2").enable({
 	enable = true,
